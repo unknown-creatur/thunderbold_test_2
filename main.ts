@@ -1,6 +1,3 @@
-function doSomething () {
-	
-}
 let y = 0
 let bright = 0
 let 倍數 = 0
@@ -19,10 +16,9 @@ basic.forever(function () {
     x += dx
     for (let index = 0; index < 5; index++) {
         for (let 倍數 = 0; 倍數 <= 4; 倍數++) {
-            bright += -50
-            led.plotBrightness(x - dx * 倍數, y, bright)
+            led.plotBrightness(x - dx * 倍數, y, 255 - 倍數 * 55)
         }
         y += 1
-        basic.pause(100)
     }
+    basic.pause(100)
 })
